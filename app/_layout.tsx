@@ -5,7 +5,9 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import { useColorScheme } from '@/hooks/useColorScheme';
+import GoogleProvider from '@/components/GoogleProvider/index.web';
 
 // Firebase
 // Your web app's Firebase configuration
@@ -22,6 +24,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app)
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -43,6 +46,8 @@ export default function RootLayout() {
   }
 
   return (
-    <Slot />
+    <GoogleProvider>
+      <Slot />
+    </GoogleProvider>
   );
 }

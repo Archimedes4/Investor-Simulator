@@ -1,0 +1,1 @@
+export declare const validateToken: (token: string) => Promise<boolean>;

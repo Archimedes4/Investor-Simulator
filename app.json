@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Investor-Simulator",
+    "name": "Investor Simulator",
     "slug": "Investor-Simulator",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +13,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.archimedes4.Investor-Simulator"
     },
     "android": {
       "adaptiveIcon": {
